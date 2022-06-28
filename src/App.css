@@ -1,39 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+:root{
+  /* FONTS */
+  --ff-body: 'Public Sans', sans-serif;
+  --ff-heading: 'Hind';
+
+  --fw-light: 300;
+  --fw-regular: 450;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* COLORS */
+  --theme-color: #CD8B65;
+  --theme-color2: #9F9F9F;
+  --theme-color3: #F3E2D9;
+}
+
+:focus {
+  outline: none !important;
+}
+
+::placeholder, ::-moz-placeholder, ::-webkit-input-placeholder {
+  font-family: var(--ff-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 131%;
+  color: #9F9F9F;
+}
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headingText {
+  font-family: var(--ff-heading);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 113%;
+  letter-spacing: 0.01em;
+  
+  color: #000000;
+
+  width: 100%;
+
+  margin: 14px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.Content {
+  padding: 0rem 180px 0rem 220px;
+  padding-top: 114px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
 }
 
-.App-header {
-  min-height: 100vh;
+.FormBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  
+  width: 557px;
+  
+  box-sizing: border-box;
+  margin: 0 32px 0 0;
+}
+
+.ImageBox {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+  width: 364px;
+  height: 770px;
+  
+  box-sizing: border-box;
+  margin: 0 0 0 32px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.Image {
+  padding: 0;
+  width: 100%;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.rowSpaceBetween {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}  
+.rowStart {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subheading{
+  /* tag */
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 119%;
+
+  /* black */
+  color: #2F2F2F;
+
+  margin-top: 40px;
+}
+
+/* tag */
+.subheadingOptional {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 136%;
+
+  text-align: right;
+
+  color: #2F2F2F;
+  opacity: 0.8;
+
+  margin-top: 40px;
+}
+
+.footerSubheading{
+  font-family: var(--ff-body);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 119%;
+
+  color: #2F2F2F;
+
+  margin-bottom: 24px;
+}
+
+.footerParagraph {
+  font-family: var(--ff-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #585757;
+
+  margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background: #FFFFFF;
+  border: 1px solid #F3E2D9;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  transform: translateY(-0.125rem);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  background: url("./assets/checkbox.svg") no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.65rem;
+  margin-left: 0.5rem;
+  
+  transform: scale(0);
+  transition: ease-in-out 0.05s;
+  padding: 0.25rem;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+
+  transition: ease-in-out 0.2s;
+}
+
+.hide {
+  visibility: hidden;
 }
