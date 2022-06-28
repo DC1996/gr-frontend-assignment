@@ -1,0 +1,29 @@
+.secondaryButton {
+    border: none;
+
+    margin-top: 3.5rem;
+    padding: 20px 24px;
+
+    border-radius: 100px;
+
+    width: min-content;
+    align-self: flex-end;
+
+    background: #F3E2D9;
+
+    cursor: pointer;
+}
+
+.secondaryButton:hover {
+    filter: brightness(105%);
+}
+
+.buttonLabel {
+    font-family: var(--ff-body);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 136%;
+
+    color: #2F2F2F;
+}
