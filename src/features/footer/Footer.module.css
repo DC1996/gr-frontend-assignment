@@ -1,0 +1,40 @@
+.boundingBox {
+    padding: 0 150px;
+    margin-top: 7.5rem;
+
+    width: 100%;
+}
+
+.footerLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-top: solid 1px rgba(47, 47, 47, 0.16);
+
+    padding: 6rem 0rem;
+}
+
+.logoBox {
+    width: 220px;
+    height: 56px;
+
+    margin-right: 168px;
+}
+
+.siteMap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.siteMapItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 170px;
+}
