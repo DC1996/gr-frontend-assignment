@@ -1,0 +1,24 @@
+.boundingBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    margin-top: 2.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.checkbox {
+    margin-right: 1rem;
+}
+
+.checkboxLabel {
+    font-family: var(--ff-body);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 131%;
+
+    color: rgba(47, 47, 47, 0.8);
+}
