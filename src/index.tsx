@@ -1,23 +1,34 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import App from "./App";
+import "./index.css";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-const container = document.getElementById('root')!;
+import { Step1 } from "./common/step1/Step1";
+import { Step2 } from "./common/step2/Step2";
+import { Step3 } from "./common/step3/Step3";
+import { FinalStep } from "./common/final/finalStep";
+
+const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <Provider store={store}>
+        <Routes>
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/" element={<App />}>
+            <Route index element={<Navigate to="/step1" />}></Route>
+            <Route path="/step1" element={<Step1 />} />
+            <Route path="/step2" element={<Step2 />} />
+            <Route path="/step3" element={<Step3 />} />
+            <Route path="/final" element={<FinalStep />} />
+          </Route>
+        </Routes>
+      </Provider>
+    </React.StrictMode>
+  </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,56 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import "./App.css";
+import { Header } from "./features/header/Header";
+import { Stepper } from "./features/stepper/Stepper";
+import dogImage from "./assets/white-dog-masked.png";
+import { Footer } from "./features/footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Header />
+      <div className="Content">
+        <div className="FormBox">
+          <Stepper stepCount={3} />
+          <Outlet />
+        </div>
+        <div className="ImageBox">
+          <img
+            className="Image"
+            src={dogImage}
+            alt="White dog licking water"
+          ></img>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
