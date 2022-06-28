@@ -1,0 +1,38 @@
+.boundingBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: max-content;
+
+    margin: 14px 0;
+    padding: 0;
+}
+
+/* Active step */
+.active {
+    width: 43.77px;
+    height: 6px;
+
+    margin: 0 2.5px;
+
+    border-radius: 10px;
+    background: linear-gradient(94.75deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100.7%), var(--theme-color);
+}
+
+.active:first-child, .default:first-child {
+    margin-left: 0;
+}
+
+/* Previous/Next (Default) step */
+.default {
+    width: 20.6px;
+    height: 6px;
+
+    margin: 0 2.5px;
+
+    border-radius: 10px;
+    background: #9F9F9F;
+    opacity: 0.36;
+}
