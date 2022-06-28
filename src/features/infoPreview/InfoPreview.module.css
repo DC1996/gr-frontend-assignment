@@ -1,0 +1,27 @@
+.infoPreviewBox {
+    margin: 0.675rem 0;
+}
+
+.infoLabel {
+    margin: 0.25rem 0;
+
+    font-family: var(--ff-body);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 136%;
+
+    color: #2F2F2F;
+}
+
+.information {
+    margin: 0.25rem 0;
+
+    font-family: var(--ff-body);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%;
+
+    color: #2F2F2F;
+}
